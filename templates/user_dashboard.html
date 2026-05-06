@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<nav class="bg-blue-600 text-white p-4 flex justify-between">
+
+<h1 class="text-xl font-bold">User Dashboard</h1>
+
+<a href="/dashboard"
+class="bg-white text-blue-600 px-4 py-2 rounded">
+Back
+</a>
+
+</nav>
+
+<div class="p-6">
+
+<!-- Stats Cards -->
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="text-gray-500">Total Files</h3>
+<p class="text-2xl font-bold">{{total_files}}</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="text-gray-500">Used Storage</h3>
+<p class="text-2xl font-bold">
+{{ (used_storage/1024/1024)|round(2) }} MB
+</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="text-gray-500">Total Plan</h3>
+<p class="text-2xl font-bold">
+{{ (total_storage/1024/1024)|round(2) }} MB
+</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="text-gray-500">Available</h3>
+<p class="text-2xl font-bold">
+{{ (remaining_storage/1024/1024)|round(2) }} MB
+</p>
+</div>
+
+</div>
+
+
+<!-- Pie Chart Section -->
+
+<div class="bg-white p-6 rounded shadow mt-6">
+
+<h3 class="text-xl font-semibold mb-4 text-center">Storage Usage</h3>
+
+<div class="w-80 mx-auto">
+<canvas id="storageChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const ctx = document.getElementById('storageChart');
+
+new Chart(ctx, {
+type: 'pie',
+data: {
+labels: ['Used Storage', 'Available Storage'],
+datasets: [{
+data: [
+{{ used_storage }},
+{{ remaining_storage }}
+],
+backgroundColor: [
+'#3B82F6',
+'#10B981'
+],
+borderWidth: 1
+}]
+},
+options: {
+responsive: true,
+plugins: {
+legend: {
+position: 'bottom'
+}
+}
+}
+});
+
+</script>
+
+</body>
+</html>

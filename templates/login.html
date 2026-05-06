@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cloud Drive Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-8 rounded-xl shadow-lg w-96">
+
+<h1 class="text-2xl font-bold text-center mb-6">☁️ Cloud Drive</h1>
+
+<!-- Tabs -->
+
+<div class="flex justify-center mb-6">
+
+<button onclick="showLogin()" id="loginBtn"
+class="px-4 py-2 bg-blue-500 text-white rounded-l">
+
+Login
+
+</button>
+
+<button onclick="showRegister()" id="registerBtn"
+class="px-4 py-2 bg-gray-300 rounded-r">
+
+Register
+
+</button>
+
+</div>
+
+<!-- Login Form -->
+
+<div id="loginForm">
+
+<form action="/login" method="POST">
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+class="w-full p-2 border rounded mb-4"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+class="w-full p-2 border rounded mb-4"
+required>
+
+<button
+class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+
+Login
+
+</button>
+
+</form>
+
+</div>
+
+<!-- Register Form -->
+
+<div id="registerForm" class="hidden">
+
+<form action="/register" method="POST">
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+class="w-full p-2 border rounded mb-4"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+class="w-full p-2 border rounded mb-4"
+required>
+
+<!-- Storage Plan Dropdown -->
+
+<label class="block mb-2 font-semibold">Select Storage Plan</label>
+
+<select
+name="plan"
+class="w-full p-2 border rounded mb-4"
+required>
+
+<option value="100">Free - 100 MB</option>
+<option value="1024">Basic - 1 GB</option>
+<option value="5120">Standard - 5 GB</option>
+<option value="10240">Premium - 10 GB</option>
+
+</select>
+
+<button
+class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">
+
+Register
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+function showLogin(){
+document.getElementById("loginForm").classList.remove("hidden")
+document.getElementById("registerForm").classList.add("hidden")
+}
+
+function showRegister(){
+document.getElementById("loginForm").classList.add("hidden")
+document.getElementById("registerForm").classList.remove("hidden")
+}
+
+</script>
+
+</body>
+</html>

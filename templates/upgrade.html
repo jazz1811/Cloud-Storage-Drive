@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upgrade Plan</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<nav class="bg-blue-600 text-white p-4 flex justify-between">
+
+<h1 class="text-xl font-bold">Upgrade Storage</h1>
+
+<a href="/dashboard"
+class="bg-white text-blue-600 px-4 py-2 rounded">
+Back
+</a>
+
+</nav>
+
+<div class="p-6">
+
+<div class="bg-white p-6 rounded shadow w-96 mx-auto">
+
+<h2 class="text-xl font-bold mb-4">Select Storage Plan</h2>
+
+<form method="POST" action="/upgrade-plan">
+
+<select name="plan"
+class="w-full p-2 border rounded mb-4">
+
+<option value="100">100 MB</option>
+<option value="500">500 MB</option>
+<option value="1024">1 GB</option>
+<option value="5120">5 GB</option>
+<option value="10240">10 GB</option>
+
+</select>
+
+<button
+class="w-full bg-purple-500 text-white p-2 rounded">
+Upgrade
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
