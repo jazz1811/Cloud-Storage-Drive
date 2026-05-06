@@ -1,4 +1,4 @@
-# Cloud-Storage-Drive
+# This project is developed for educational and learning purposes only. #
 
 # ☁️ Cloud Storage Drive
 
@@ -62,3 +62,24 @@ User Device → Web Application → Backend Server → AWS S3 Storage → Databa
 - Controlled File Management
 
 ---
+
+⚙️ Installation Steps
+1️⃣ Clone Repository
+git clone https://github.com/jazz1811/Cloud-Storage-Drive.git
+2️⃣ Navigate to Project Folder
+cd Cloud-Storage-Drive
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+4️⃣ Run Application
+python app.py
+
+
+🌐 Deployment
+
+The application is deployed on AWS EC2 and integrated with AWS S3 cloud storage services.
+
+
+👉 “Please make the necessary changes according to your EC2 instance IP address, S3 bucket name, and AWS region. Also, attach an Elastic IP to the EC2 instance so that the public IP address does not change after restarting the server.”
+
+
+
