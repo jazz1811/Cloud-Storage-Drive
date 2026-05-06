@@ -66,11 +66,11 @@ User Device → Web Application → Backend Server → AWS S3 Storage → Databa
 # ⚙️ Installation Steps
 1️⃣ Clone Repository
 git clone https://github.com/jazz1811/Cloud-Storage-Drive.git
-2️⃣ Navigate to Project Folder
+2️⃣ Navigate to Project Folder =  
 cd Cloud-Storage-Drive
-3️⃣ Install Dependencies
+3️⃣ Install Dependencies = 
 pip install -r requirements.txt
-4️⃣ Run Application
+4️⃣ Run Application = 
 python app.py
 
 ---
