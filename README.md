@@ -63,7 +63,7 @@ User Device → Web Application → Backend Server → AWS S3 Storage → Databa
 
 ---
 
-⚙️ Installation Steps
+# ⚙️ Installation Steps
 1️⃣ Clone Repository
 git clone https://github.com/jazz1811/Cloud-Storage-Drive.git
 2️⃣ Navigate to Project Folder
@@ -73,8 +73,8 @@ pip install -r requirements.txt
 4️⃣ Run Application
 python app.py
 
-
-🌐 Deployment
+---
+# 🌐 Deployment
 
 The application is deployed on AWS EC2 and integrated with AWS S3 cloud storage services.
 
